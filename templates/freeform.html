@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}test page{% endblock %}
+{% block content %}
+<br>
+<h1 class="text-center"> 게시판 작성 </h1>
+<div class="container">
+    <form action="/freeform" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="name" class="form-label">name</label>
+            <input type="text" class="form-control" id="Name" name="name" aria-describedby="nameHelp">
+            <div id="nameHelp" class="form-text">이름은 한글로 작성하세요</div>
+          </div>
+        <div class="mb-3">
+          <label for="title" class="form-label">title</label>
+          <input type="text" class="form-control" id="title" name="title" aria-describedby="titleHelp">
+          <div id="titlelHelp" class="form-text">자유롭게 작성하세요.</div>
+        </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">이미지선택</label>
+            <input class="form-control" type="file" id="formFile" name="formFile">
+          </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+{% endblock %}
